@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --app --eslint --src-dir --import-alias \"@/*\" --use-npm --no-turbopack --disable-git)",
+      "Read(//c/Users/ombho/Desktop/**)",
+      "Bash(npx --yes create-next-app@latest portfolio-tmp --typescript --tailwind --app --eslint --src-dir --import-alias \"@/*\" --use-npm --no-turbopack --disable-git)",
+      "Bash(mv portfolio-tmp/.gitignore portfolio-tmp/AGENTS.md portfolio-tmp/README.md portfolio-tmp/eslint.config.mjs portfolio-tmp/next-env.d.ts portfolio-tmp/next.config.ts portfolio-tmp/package-lock.json portfolio-tmp/package.json portfolio-tmp/postcss.config.mjs portfolio-tmp/public portfolio-tmp/src portfolio-tmp/tsconfig.json portfolio-tmp/node_modules Portfolio/)",
+      "Bash(rm -f portfolio-tmp/CLAUDE.md)",
+      "Bash(rm -rf \"C:\\\\Users\\\\ombho\\\\Desktop\\\\portfolio-tmp\")",
+      "Bash(mkdir -p \"C:\\\\Users\\\\ombho\\\\Desktop\\\\Portfolio\\\\public\\\\images\")",
+      "Bash(cp \"C:\\\\Users\\\\ombho\\\\Desktop\\\\Portfolio\\\\image\\\\\"*.png \"C:\\\\Users\\\\ombho\\\\Desktop\\\\Portfolio\\\\public\\\\images\\\\\")",
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(npm run *)",
+      "Bash(curl *)",
+      "Bash(npx eslint *)"
+    ]
+  }
+}

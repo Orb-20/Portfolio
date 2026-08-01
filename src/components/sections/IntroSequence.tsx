@@ -126,7 +126,7 @@ export default function IntroSequence() {
         >
           <Image
             ref={photoImgRef}
-            src="/images/p1.png"
+            src="/images/hero-p1.png"
             alt="Portrait of Om"
             fill
             sizes={`${PHOTO_WIDTH}px`}
@@ -135,8 +135,8 @@ export default function IntroSequence() {
           />
           <div ref={canvasWrapRef} className="absolute inset-0">
             <DissolveCanvas
-              fromImage="/images/p1.png"
-              toImage="/images/p2.png"
+              fromImage="/images/hero-p1.png"
+              toImage="/images/hero-p2.png"
               width={PHOTO_WIDTH}
               height={PHOTO_HEIGHT}
               progressRef={dissolveProgressRef}

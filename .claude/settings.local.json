@@ -13,7 +13,12 @@
       "Bash(npx tsc *)",
       "Bash(npm run *)",
       "Bash(curl *)",
-      "Bash(npx eslint *)"
+      "Bash(npx eslint *)",
+      "Bash(npx next *)",
+      "WebSearch",
+      "Bash(node -e \"console.log\\('version:', require\\('./node_modules/animejs/package.json'\\).version\\); console.log\\('types:', require\\('./node_modules/animejs/package.json'\\).types || require\\('./node_modules/animejs/package.json'\\).typings\\)\")",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(node -e \"const m=require\\('./node_modules/animejs/package.json'\\); console.log\\(JSON.stringify\\(m.exports,null,1\\)\\)\")"
     ]
   }
 }

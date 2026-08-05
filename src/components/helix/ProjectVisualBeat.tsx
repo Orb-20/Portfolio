@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import type { Project } from "@/lib/projects";
+import { artifactSide } from "@/lib/helix";
 import StudioOakBeat from "./visual-beats/StudioOakBeat";
 import RateLimiterBeat from "./visual-beats/RateLimiterBeat";
 import CreditRiskBeat from "./visual-beats/CreditRiskBeat";
@@ -29,6 +30,7 @@ interface ProjectVisualBeatProps {
 
 export default function ProjectVisualBeat({ project }: ProjectVisualBeatProps) {
   const Beat = project ? BEATS[project.id] : null;
+  const side = project ? artifactSide(project.index) : "left";
 
   return (
     <div className="pointer-events-none absolute inset-0 z-20">
@@ -37,14 +39,14 @@ export default function ProjectVisualBeat({ project }: ProjectVisualBeatProps) {
           <motion.div
             key={project.id}
             className={`absolute inset-0 ${
-              project.imageSide === "left" ? "text-left" : "text-right"
+              side === "left" ? "text-left" : "text-right"
             }`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <Beat side={project.imageSide} />
+            <Beat side={side} />
           </motion.div>
         )}
       </AnimatePresence>

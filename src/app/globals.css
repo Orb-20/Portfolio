@@ -21,6 +21,9 @@
 
   --font-display: "Clash Display", "General Sans", sans-serif;
   --font-body: "General Sans", "Inter", sans-serif;
+  /* Utility face for data, labels and specs — an engineer's register. */
+  --font-mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas,
+    "Liberation Mono", monospace;
 }
 
 html {

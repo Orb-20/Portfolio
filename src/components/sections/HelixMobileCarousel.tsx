@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FiGithub, FiExternalLink } from "react-icons/fi";
+import { FiGithub, FiArrowUpRight } from "react-icons/fi";
 import { projects } from "@/lib/projects";
 import ProjectVisualBeat from "@/components/helix/ProjectVisualBeat";
 
@@ -42,51 +42,51 @@ export default function HelixMobileCarousel() {
               <ProjectVisualBeat project={project} />
             </div>
 
-            <div className="p-6">
-              <p className="text-xs font-medium uppercase tracking-widest text-accent">
-                {String(project.index + 1).padStart(2, "0")} /{" "}
-                {String(projects.length).padStart(2, "0")}
+            <div className="border-l border-accent/35 p-6 pl-5">
+              <p className="font-mono text-[0.68rem] tracking-[0.24em] text-accent">
+                {String(project.index + 1).padStart(2, "0")}
+                <span className="text-text-secondary/50">
+                  {" "}
+                  / {String(projects.length).padStart(2, "0")}
+                </span>
               </p>
-              <h3 className="mt-2 font-display text-2xl font-semibold text-text-primary">
+              <h3 className="mt-3 font-display text-2xl font-semibold leading-[1.05] tracking-[-0.03em] text-text-primary">
                 {project.title}
               </h3>
               <p className="mt-1 text-sm text-text-secondary">
                 {project.subtitle}
               </p>
 
-              <div className="mt-4 flex flex-wrap gap-2">
-                {project.techStack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded-full border border-border bg-background px-3 py-1 text-xs text-text-secondary"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
               <p className="mt-4 text-sm leading-relaxed text-text-secondary">
                 {project.description}
               </p>
 
-              <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-xs text-text-secondary">
+              <p className="mt-5 font-mono text-[0.6rem] uppercase tracking-[0.24em] text-text-secondary/60">
+                Stack
+              </p>
+              <p className="mt-2 font-mono text-xs leading-relaxed text-text-primary/80">
+                {project.techStack.join("  ·  ")}
+              </p>
+
+              <p className="mt-4 font-mono text-[0.6rem] uppercase tracking-[0.24em] text-text-secondary/60">
+                Features
+              </p>
+              <ul className="mt-2 grid grid-cols-2 gap-x-5 gap-y-1 font-mono text-xs text-text-secondary">
                 {project.features.slice(0, 6).map((feature) => (
-                  <li key={feature} className="before:mr-1 before:content-['·']">
-                    {feature}
-                  </li>
+                  <li key={feature}>{feature}</li>
                 ))}
               </ul>
 
               {(project.github || project.liveDemo) && (
-                <div className="mt-6 flex gap-4">
+                <div className="mt-6 flex gap-6">
                   {project.github && (
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm font-medium text-text-primary"
+                      className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.16em] text-text-primary"
                     >
-                      <FiGithub /> GitHub
+                      <FiGithub aria-hidden /> Source
                     </a>
                   )}
                   {project.liveDemo && (
@@ -94,9 +94,9 @@ export default function HelixMobileCarousel() {
                       href={project.liveDemo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm font-medium text-text-primary"
+                      className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.16em] text-text-primary"
                     >
-                      <FiExternalLink /> Live Demo
+                      <FiArrowUpRight aria-hidden /> Live
                     </a>
                   )}
                 </div>

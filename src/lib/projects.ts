@@ -1,3 +1,4 @@
+/** Which half of the frame something occupies. Derived, never stored — see `artifactSide`. */
 export type ProjectSide = "left" | "right";
 
 export interface Project {
@@ -9,7 +10,6 @@ export interface Project {
   description: string;
   features: string[];
   techStack: string[];
-  imageSide: ProjectSide;
   github?: string;
   liveDemo?: string;
 }
@@ -36,9 +36,7 @@ export const projects: Project[] = [
       "REST APIs",
       "admin dashboard",
     ],
-    techStack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
-    imageSide: "left",
-  },
+    techStack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],  },
   {
     id: "rate-limiter",
     index: 1,
@@ -57,9 +55,7 @@ export const projects: Project[] = [
       "configurable limits",
       "production-grade architecture",
     ],
-    techStack: ["Java", "Spring Boot", "Redis", "Docker", "REST API"],
-    imageSide: "right",
-  },
+    techStack: ["Java", "Spring Boot", "Redis", "Docker", "REST API"],  },
   {
     id: "credit-risk",
     index: 2,
@@ -78,9 +74,7 @@ export const projects: Project[] = [
       "model evaluation",
       "financial inclusion focus",
     ],
-    techStack: ["Python", "XGBoost", "Scikit-learn", "Pandas", "NumPy", "SHAP", "Matplotlib"],
-    imageSide: "left",
-  },
+    techStack: ["Python", "XGBoost", "Scikit-learn", "Pandas", "NumPy", "SHAP", "Matplotlib"],  },
   {
     id: "physiocheck",
     index: 3,
@@ -98,9 +92,7 @@ export const projects: Project[] = [
       "progress tracking",
       "rehabilitation assistance",
     ],
-    techStack: ["Python", "OpenCV", "MediaPipe", "Machine Learning", "Computer Vision"],
-    imageSide: "right",
-  },
+    techStack: ["Python", "OpenCV", "MediaPipe", "Machine Learning", "Computer Vision"],  },
   {
     id: "orbe",
     index: 4,
@@ -117,9 +109,7 @@ export const projects: Project[] = [
       "market influence mapping",
       "graph algorithms",
     ],
-    techStack: ["Python", "NetworkX", "Graph Theory", "React", "Data Visualization"],
-    imageSide: "left",
-  },
+    techStack: ["Python", "NetworkX", "Graph Theory", "React", "Data Visualization"],  },
   {
     id: "ngo-connect",
     index: 5,
@@ -137,9 +127,7 @@ export const projects: Project[] = [
       "responsive design",
       "user management",
     ],
-    techStack: ["React", "Node.js", "Express", "MongoDB", "JWT"],
-    imageSide: "right",
-  },
+    techStack: ["React", "Node.js", "Express", "MongoDB", "JWT"],  },
   {
     id: "binary-tree-visualizer",
     index: 6,
@@ -156,7 +144,5 @@ export const projects: Project[] = [
       "tree balancing visualization",
       "interactive animations",
     ],
-    techStack: ["JavaScript", "React", "D3.js", "Algorithms"],
-    imageSide: "left",
-  },
+    techStack: ["JavaScript", "React", "D3.js", "Algorithms"],  },
 ];
